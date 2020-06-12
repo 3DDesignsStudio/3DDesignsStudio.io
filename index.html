@@ -652,7 +652,8 @@
               <input type="text" id="message" class="message-box" placeholder="Message" />
             </div>
             <div class="d-flex  mt-4 ">
-              <button type="button"  onClick="return sendInfo()">Send Message</button>
+              <!--<button type="button"  onClick="return sendInfo()">Send Message</button>-->
+              <input type="button" value="Send Message"  class="SendbuttonClass" onClick="return sendInfo(this)" />
             </div>
           </form>
         </div>
@@ -777,8 +778,11 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/circles.min.js"></script>
   <script src="js/custom.js"></script>
+
   <script>
-    function sendInfo(){
+    function sendInfo(obj){
+    $(obj).attr('disabled',true);
+    $(obj).attr('value','Please wait ...');
     var map={}
     map["name"]=$("#name").val();
     map["emailid"]=$("#email").val();
