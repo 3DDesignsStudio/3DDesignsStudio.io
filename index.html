@@ -652,9 +652,7 @@
               <input type="text" id="message" class="message-box" placeholder="Message" />
             </div>
             <div class="d-flex  mt-4 ">
-              <button>
-                SEND
-              </button>
+              <button type="button"  onClick="return sendInfo()">Send Message</button>
             </div>
           </form>
         </div>
@@ -779,7 +777,30 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/circles.min.js"></script>
   <script src="js/custom.js"></script>
-
+  <script>
+    function sendInfo(){
+    var map={}
+    map["name"]=$("#name").val();
+    map["emailid"]=$("#email").val();
+    map["phoneNo"]=$("#Phone").val();
+    map["message"]=$("#message").val();
+    $.ajax({
+     type: 'POST',
+     data: JSON.stringify(map),
+     url: "https://3slraard19.execute-api.ap-south-1.amazonaws.com/dev/snedNotifn",
+     success: function (response) {
+    alert("Thanks you, for Contact us, Your response is important to us, We will get back you soon.");
+    location.reload();
+    },
+     error : function (response) {
+    alert("Error while submitting response, Please contact admin")
+    location.reload();
+    }
+    
+    });
+    return false;
+    }
+    </script>
 
 </body>
 

@@ -149,7 +149,7 @@
             </div>
             <div class="d-flex  mt-4 ">
              
-              <button type="button"  onClick="return sendEmail()">Send Message</button>
+              <button type="button"  onClick="return sendInfo()">Send Message</button>
             </div>
           </form>
         </div>
@@ -274,53 +274,30 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/circles.min.js"></script>
   <script src="js/custom.js"></script>
-<script>
-
-function sendEmail(){
-	
-	if($("#name").val() == '' ){
-		   alert('Please enter your Name.');
-		   $("#name").focus()
-		   return false;
-	   	}
-		 if($("#email").val() == '' ){
-		   alert('Please enter a valid email.');
-		 $("#email").focus()
-		   return false;
-	   	}
-		 if($("#Phone").val() == '' ){
-		   alert('Please enter 10 digit Phone/Mobile Number.');
-		   $("#Phone").focus()
-		   return false;
-	   
-		 }
-		   
-	var content ="Hi,<br> Below enquiry details from '3D Designs Studio' Contact-Us.<br><br>";
-  
-	content = content + "<ol><li>Name :"+$("#name").val()+".</li>";
-	content = content + "<li>EmailID :"+$("#email").val()+".</li>";
-	content = content + "<li>Phone No :"+$("#Phone").val()+".</li>";
-	content = content + "<li>More Details :"+$("#message").val()+".</li></ol><br><br>";
-	content = content + "Thanks and Regards,<br> 3D Designs Studio. <br><br>";
-	
-	var data = '{"content":"'+content+'"}';
-	
-	$.ajax({
-	 type: 'POST',
-	 url: "",
-	 data: data,
-	 success: function (response) {
-		 alert('Thank you for Contact-Us.')
-		 location.reload();
-	},
-	 error : function (response) {
-	alert(response);
-	}
-
-	});
-	}
-
-</Script>
+  <script>
+    function sendInfo(){
+    var map={}
+    map["name"]=$("#name").val();
+    map["emailid"]=$("#email").val();
+    map["phoneNo"]=$("#Phone").val();
+    map["message"]=$("#message").val();
+    $.ajax({
+     type: 'POST',
+     data: JSON.stringify(map),
+     url: "https://3slraard19.execute-api.ap-south-1.amazonaws.com/dev/snedNotifn",
+     success: function (response) {
+    alert("Thanks you, for Contact us, Your response is important to us, We will get back you soon.");
+    location.reload();
+    },
+     error : function (response) {
+    alert("Error while submitting response, Please contact admin")
+    location.reload();
+    }
+    
+    });
+    return false;
+    }
+    </script>
 
 
 </body>
