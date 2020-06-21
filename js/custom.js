@@ -84,3 +84,18 @@ var myCircle = Circles.create({
     styleWrapper: true,
     styleText: true
 });
+function myFunction() {
+
+    if($("#password").val() != '3DDesign' ){
+                     alert('Please enter valid password.');
+                     $("#password").focus()
+                     return false;
+                 }
+  
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

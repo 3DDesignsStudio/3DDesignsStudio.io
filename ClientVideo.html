@@ -145,11 +145,11 @@
     <div id="myDIV">
         <p> Sample Video : </p>
         <div class="col-md-12" align="center">
-          <video width="320" height="240" controls> 
-            <source src="images/Mayur.mp4" type=video/mp4>
+          <!--<video width="320" height="240" controls> 
+            <source src="images/Mayur.mp4" type=video/mp4>-->
           </video>  
-          <!-- <iframe width="420" height="345" src="https://youtu.be/b5k09LZfwOk">
-          </iframe> -->
+           <iframe width="640" height="360" src="images/Mayur.mp4">
+          </iframe> 
         </div>
       </div>
   </div>
@@ -273,23 +273,7 @@
     var x = document.getElementById("myDIV");
     x.style.display = "none";
   </script>
-  <script>
-function myFunction() {
 
-  if($("#password").val() != '3DDesign' ){
-        		   alert('Please enter valid password.');
-        		   $("#password").focus()
-        		   return false;
-        	   }
-
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
 </body>
 
 </html>
