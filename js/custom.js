@@ -85,7 +85,12 @@ var myCircle = Circles.create({
     styleText: true
 });
 function myFunction() {
+    $(document).ready(() => {
 
+        $('video').attr('controlsList', 'nodownload');
+        
+        });
+        
     if($("#password").val() != '3DDesign' ){
                      alert('Please enter valid password.');
                      $("#password").focus()

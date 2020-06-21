@@ -27,6 +27,20 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    video::-internal-media-controls-download-button {
+     display:none;
+    }
+  
+    video::-webkit-media-controls-enclosure {
+         overflow:hidden;
+    }
+  
+    video::-webkit-media-controls-panel {
+         width: calc(100% + 30px); 
+    }
+  </style>
 </head>
 
 <body class="sub_page">
@@ -273,6 +287,8 @@
     var x = document.getElementById("myDIV");
     x.style.display = "none";
   </script>
+
+
 
 </body>
 
