@@ -284,8 +284,16 @@
   <script src="js/circles.min.js"></script>
   <script src="js/custom.js"></script>
   <script>
+    
     var x = document.getElementById("myDIV");
     x.style.display = "none";
+
+    $(document).bind("contextmenu",function(ev){
+    if(ev.target.nodeName=='VIDEO')
+    {
+        return false;
+    }
+});
   </script>
 
 
