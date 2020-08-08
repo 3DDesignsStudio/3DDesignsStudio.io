@@ -91,7 +91,7 @@ function myFunction() {
         
         });
         
-    if($("#password").val() != '3DDesign' ){
+    if($("#password").val() != 'Jalaj7' ){
                      alert('Please enter valid password.');
                      $("#password").focus()
                      return false;
