@@ -91,16 +91,41 @@ function myFunction() {
         
         });
         
-    if($("#password").val() != 'Jalaj7' ){
-                     alert('Please enter valid password.');
-                     $("#password").focus()
-                     return false;
-                 }
-  
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+        var x = document.getElementById("myDIV");
+        var y = document.getElementById("myDIVNew");
+        x.style.display = "none";
+        y.style.display = "none";
+        
+   // if(($("#password").val() != 'Jalaj7' ) || ($("#password").val() != 'Jalaj77' )){
+        if(($("#password").val() == 'Jalaj7' ) ) {
+            
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                x.style.display = "block";
+                } else {
+                x.style.display = "none";
+                }
+        
+        } else if(($("#password").val() == 'Jalaj77' ) ) {
+            
+                var y = document.getElementById("myDIVNew");
+                if (y.style.display === "none") {
+                y.style.display = "block";
+                } else {
+                y.style.display = "none";
+                }
+            
+        } else {
+                    
+            alert('Please enter valid password.');
+            var x = document.getElementById("myDIV");
+            var y = document.getElementById("myDIVNew");
+            x.style.display = "none";
+            y.style.display = "none";
+            $("#password").focus()
+            return false;
+        }
+         
   }
+
+  

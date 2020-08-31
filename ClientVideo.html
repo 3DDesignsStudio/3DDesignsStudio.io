@@ -254,6 +254,27 @@
 
           </div>    
       </div>
+
+      <div id="myDIVNew">
+
+        <div class="col-md-12" align="center">
+          <p> Video - 1 (Zabs File): </p>
+          <div  style="width: 640px; height: 360px; position: relative;">
+            <iframe src="https://drive.google.com/file/d/1z7dbCQJYoOscwFMpDh7by8ycefqr-Q6z/preview"   width="640" height="360" allowfullscreen frameborder="0" scrolling="no" seamless=""></iframe>
+            <div style="width: 80px; height: 80px; position: absolute; opacity: 0; right: 0px; top: 0px;">&nbsp;</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-12" align="center">
+        <p> Sample Video  </p>
+        <div  style="width: 640px; height: 360px; position: relative;">
+          <iframe src="https://drive.google.com/file/d/1pXaCSIVA8fA_HSDHOudGzrwc4C1buPrW/preview"   width="640" height="360" allowfullscreen frameborder="0" scrolling="no" seamless=""></iframe>
+          <div style="width: 80px; height: 80px; position: absolute; opacity: 0; right: 0px; top: 0px;">&nbsp;</div>
+        </div>
+      </div>
+
   </div>
 </section>
 
@@ -384,7 +405,18 @@
 });
   </script>
 
+<script>
+    
+  var x = document.getElementById("myDIVNew");
+  x.style.display = "none";
 
+  $(document).bind("contextmenu",function(ev){
+  if(ev.target.nodeName=='VIDEO')
+  {
+      return false;
+  }
+});
+</script>
 
 </body>
 
