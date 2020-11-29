@@ -134,4 +134,4 @@ function checkHttpReq(){
 	  location.href = location.href.replace("http","https");
 	}
 }
-  
+   
