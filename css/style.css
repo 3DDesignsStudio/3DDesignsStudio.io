@@ -352,6 +352,7 @@ a:focus {
   padding: 10px 15px;
   border-radius: 15px;
   margin: 25px 0;
+  height: 380px;
 }
 
 .do_section .content-box img {
